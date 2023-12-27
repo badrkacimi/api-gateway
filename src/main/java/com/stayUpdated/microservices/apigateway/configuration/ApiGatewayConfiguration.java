@@ -15,12 +15,12 @@ public class ApiGatewayConfiguration {
                 .filters(f ->f.addRequestHeader("myHeader1", "application/json")
                              .addRequestHeader("myHeader2", "application/xml"))
                       .uri("http://httpbin.org:80"))
-                .route(r -> r.path("/currency-conversion/**")
-                        .uri("lb://currency-conversion"))
+                .route(r -> r.path("/currency-exchange/**")
+                        .uri("lb://currency-exchange-service"))
                 .route(r -> r.path("/currency-conversion-new/**")
                         .filters(f ->f.rewritePath("/currency-conversion-new/(?<segment>.*)",
                                         "/currency-conversion/feign/${segment}"))
-                        .uri("lb://currency-conversion"))
+                        .uri("lb://currency-conversion-service"))
               .build();
     }
 
