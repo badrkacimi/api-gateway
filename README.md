@@ -32,11 +32,20 @@ The application will start and be accessible at http://localhost:8765.
 ### Routing Examples
 
 Currency Conversion Service:
-Feign Client: /currency-conversion-service/currency-conversion/feign/from/{from}/to/{to}/quantity/{quantity}
-New Endpoint: /currency-conversion-new/from/{from}/to/{to}/quantity/{quantity}
+- Feign Client: 
+```
+/currency-conversion-service/currency-conversion/feign/from/{from}/to/{to}/quantity/{quantity}
+```
+- New Endpoint:
+```
+/currency-conversion-new/from/{from}/to/{to}/quantity/{quantity}
+```
 
 Currency Exchange Service:
+```
 Endpoint: /currency-exchange/from/{from}/to/{to}
+```
+
 Replace {from}, {to}, and {quantity} with appropriate currency codes and amounts.
 
 ###  Features
